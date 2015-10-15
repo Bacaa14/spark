@@ -118,7 +118,7 @@ private[spark] object FileAppender extends Logging {
     import RollingFileAppender._
 
     val rollingStrategy = conf.get(STRATEGY_PROPERTY, STRATEGY_DEFAULT)
-    val rollingSizeBytes = conf.get(SIZE_PROPERTY, STRATEGY_DEFAULT)
+    val rollingSizeBytes = conf.get(SIZE_PROPERTY, SIZE_DEFAULT)
     val rollingInterval = conf.get(INTERVAL_PROPERTY, INTERVAL_DEFAULT)
 
     def createTimeBasedAppender(): FileAppender = {
